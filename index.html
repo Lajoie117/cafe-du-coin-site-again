@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Le Café du Coin</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="overlay">
+    <h1>Le Café du Coin</h1>
+
+    <p>
+      <a
+        href="https://maps.app.goo.gl/eCeub5J4A5x5AQEN8?g_st=i"
+        target="_blank" rel="noopener"
+      >
+        9 rue Camille Desmoulins, 75011 Paris
+      </a>
+    </p>
+
+    <p><a href="tel:+33123456789">+33 1 23 45 67 89</a></p>
+
+    <!-- Zenchef Widget -->
+    <div
+      class="zc-widget-config"
+      data-restaurant="377702"
+      data-open="2000">
+    </div>
+  </div>
+
+  <!-- Instagram redirection -->
+  <script>
+    document.body.addEventListener('click', function (e) {
+      if (!e.target.closest('a') && !e.target.closest('.zc-widget-config')) {
+        window.location = 'https://www.instagram.com/cafe_du_coin/?hl=fr';
+      }
+    });
+  </script>
+
+  <!-- Zenchef SDK -->
+  <script>
+    ;(function (d, s, id) {
+      const el = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id) || el.parentNode == null) return;
+      var js = d.createElement(s);
+      js.id = id;
+      js.async = true;
+      js.src = 'https://sdk.zenchef.com/v1/sdk.min.js';
+      el.parentNode.insertBefore(js, el);
+    })(document, 'script', 'zenchef-sdk');
+  </script>
+</body>
+</html>
